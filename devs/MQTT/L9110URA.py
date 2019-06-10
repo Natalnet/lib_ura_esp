@@ -13,13 +13,13 @@ class L9110URA(MotorDC):
         self.motorLeft.s(1)
         self.motorLeft.v(1000)
         self.motorRight.s(1)
-        self.motorRight.v(1000) 
+        self.motorRight.v(900) 
 
     def backward(self):
         self.motorLeft.s(0)
         self.motorLeft.v(0)
         self.motorRight.s(0)
-        self.motorRight.v(0) 
+        self.motorRight.v(100) 
         
     def turnLeft(self):
         self.motorLeft.s(0)
@@ -38,4 +38,5 @@ class L9110URA(MotorDC):
         self.motorLeft.v(0)
         self.motorRight.s(1)
         self.motorRight.v(0)
+
 
