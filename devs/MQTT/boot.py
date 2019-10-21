@@ -16,12 +16,19 @@ from L9110URA import L9110URA
 robot = L9110URA(13,12,5,23) 
 robot.stop()  
 
-ssid = '****'
-password = '****'
-mqtt_server = '****'
+
+command = b'x' 
+commandTime = 200 # em milisegundos 
+commandLastTime = 0 
+
+#ssid = 'Amaraji'
+#password = 'jeannebeatriz'
+ssid = 'PARK BEATRIZ'
+password = 'fazendabeatriz'
+mqtt_server = '157.230.89.7'
 server_port=1883
 mqtt_user='mqtt'
-mqtt_password='****'
+mqtt_password='oriva_mqtt'
 
 client_id = ubinascii.hexlify(machine.unique_id())
 topic_sub = b'URA/robo1/acao'
@@ -41,6 +48,9 @@ while station.isconnected() == False:
 
 print('Connection successful')
 print(station.ifconfig())
+
+
+
 
 
 

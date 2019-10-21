@@ -4,7 +4,7 @@
 
 """
     This module implements .
-    :copyright: © 2018 by the Lindos team.
+    :copyright: 漏 2018 by the Lindos team.
     :license: BSD, see LICENSE for more details.
 """
 
