@@ -5,9 +5,9 @@ class Rodas:
     # O valor maximo e 1024 
     self.freqA = 900
     self.freqB = 900 
-    ## Os pinos para o Shield ESP s茫o fixos 
+    ## Os pinos para o Shield ESP são fixos 
     # Para o motor A, esquerdo, os pinos sao:
-    # 5 para velocidade e 0 para dire莽ao 
+    # 5 para velocidade e 0 para direção 
     self.PwmA = PWM(Pin(5), freq=1000 ,duty = 0)
     self.DirA = Pin(0, Pin.OUT)   
     # Para o motor A, esquerdo, os pinos sao:
@@ -16,7 +16,11 @@ class Rodas:
     self.DirB = Pin(2, Pin.OUT)
     # Os pinos a seguir foram ocupados 
     # para controlar a ponte H 
-    # D2 = GPIO 
+    # D1 = GPIO 5
+    # D2 = GPIO 4
+    # D3 = GPIO 0
+    # D4 = GPIO 2
+     
     
   def frente(self):
     print("frente") 
