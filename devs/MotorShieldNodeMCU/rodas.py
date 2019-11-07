@@ -5,13 +5,13 @@ class Rodas:
     # O valor maximo e 1024 
     self.freqA = 900
     self.freqB = 900 
-    ## Os pinos para o Shield ESP s茫o fixos 
+    ## Os pinos para o Shield ESP s鑼玱 fixos 
     # Para o motor A, esquerdo, os pinos sao:
-    # 5 para velocidade e 0 para dire莽茫o 
+    # 5 para velocidade e 0 para dire鑾借尗o 
     self.PwmA = PWM(Pin(5), freq=1000 ,duty = 0)
     self.DirA = Pin(0, Pin.OUT)   
     # Para o motor A, esquerdo, os pinos sao:
-    # 5 para velocidade e 0 para dire鑾絘o
+    # 5 para velocidade e 0 para dire閼剧禈o
     self.PwmB = PWM(Pin(4), freq=1000 ,duty = 0)
     self.DirB = Pin(2, Pin.OUT)
     # Os pinos a seguir foram ocupados 

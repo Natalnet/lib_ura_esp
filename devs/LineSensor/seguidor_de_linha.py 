@@ -7,22 +7,26 @@ sensorLinhaDir = machine.Pin(pinDir, machine.Pin.IN, machine.Pin.PULL_UP)
 
 
 import time 
+from rodas import Rodas 
+r = Rodas()
 
 parar =  False 
 
-delta = 1000 
+delta = 50 
 
 ## O sensor retorna 1 para branco e 0 para preto 
 while ( not parar ):
   time.sleep_ms(delta) 
   if ( sensorLinhaDir.value() and sensorLinhaEsq.value() ): 
-    print("Siga em frente!") 
+    r.frente()
   elif ( not sensorLinhaDir.value() and not sensorLinhaEsq.value() ):
-    print("Para")
+    r.parar()
     parar = True
   elif ( not sensorLinhaEsq.value() ):
-    print("Gira par esquerda!")
-  elif ( not  sensorLinhaDir.value() ): 
-    print("Gira para direita!") 
+    r.esquerda()
+  elif ( not  sensorLinhaDir.value() ):
+    r.direita() 
+
  
+
 
