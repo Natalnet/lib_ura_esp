@@ -12,4 +12,4 @@ while True:
         print('Siga em Frente')
         dr.forward()
     print('Distance:', distance, 'cm')
-    utime.sleep_ms(1000)
+    utime.sleep_ms(50)
