@@ -1,13 +1,15 @@
 from hcsr04 import HCSR04
-import time
+import utime
 
 sensor = HCSR04(trigger_pin=16, echo_pin=0)
 
 while True:
     distance = sensor.distance_cm()
-    if distance<5:
-        print('Menor que 5')
+    if distance<30:
+        print('Vire para Direita')
+        dr.turnLeft()
     else:
-        print('Maior que 5')
+        print('Siga em Frente')
+        dr.forward()
     print('Distance:', distance, 'cm')
-    time.sleep(1)
+    utime.sleep_ms(1000)
