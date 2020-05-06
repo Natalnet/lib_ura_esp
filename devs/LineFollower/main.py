@@ -10,7 +10,7 @@ from rodas import Rodas
 r = Rodas()
 
 delta = 40 
-## O sensor retorna 1 para branco e 0 para preto 
+## O sensor retorna 1 para escuro (linha) e 0 para claro (livre)  
 while ( True ):
   r.parar()
   time.sleep_ms(delta) 
