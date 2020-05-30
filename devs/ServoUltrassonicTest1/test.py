@@ -1,3 +1,7 @@
+## Teste com três leituras 
+# Faz o teste combinando ultrassom e servo motor para coletar três 
+# leituras de distância 
+
 from hcsr04 import HCSR04
 from servo_motor import Servo
 import time
