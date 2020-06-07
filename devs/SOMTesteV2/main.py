@@ -34,6 +34,7 @@ while True:
     # Escolhe executa a ação 
     if acao == 'f':
         rodas.frente()
+        time.sleep_ms(300)
     elif acao == 'e':
         rodas.esquerda()
     elif acao == 'd':
