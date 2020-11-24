@@ -1,41 +1,43 @@
 
-#B_IA  -->  Motor B PWM Speed
-#B_IB  -->  Motor B Direction 
+## Motor A - Esquerdo  
+# Sugestão de Pinos 
+#A_IA  -->  Motor A PWM Speed
+#A_IB  -->  Motor A Direction 
+
+## Motor B - Direito 
+# Sugestão de Pinos 
+#B_IA  -->  Motor B PWM Speed --> 13
+#B_IB  -->  Motor B Direction --> 12 
+
+
+
+ 
 
 from MotorDC import MotorDC
 class L9110URA(MotorDC): 
     def __init__ (self, pinVelL,pinDirL,pinVelD,pinDirD):
         self.name = 'L9110URA'
-        self.motorLeft = MotorDC(pinVelL,pinDirL)
-        self.motorRight = MotorDC(pinVelD,pinDirD)
+        self.motorEsquerdo = MotorDC(pinVelL,pinDirL)
+        self.motorDireito = MotorDC(pinVelD,pinDirD)
 
-    def forward(self):
-        self.motorLeft.s(1)
-        self.motorLeft.v(1000)
-        self.motorRight.s(1)
-        self.motorRight.v(1000) 
+    def frente(self, vel = 0):
+        self.configura(0,vel,0,vel)
 
-    def backward(self):
-        self.motorLeft.s(0)
-        self.motorLeft.v(0)
-        self.motorRight.s(0)
-        self.motorRight.v(0) 
+    def re(self):
+        self.configura(1,1000,1,1000)
         
-    def turnLeft(self):
-        self.motorLeft.s(0)
-        self.motorLeft.v(0)
-        self.motorRight.s(1)
-        self.motorRight.v(1000)  
+    def esquerda(self):
+        self.configura(1,1000,0,0)
         
-    def turnRight(self):
-        self.motorLeft.s(1)
-        self.motorLeft.v(1000)
-        self.motorRight.s(0)
-        self.motorRight.v(0) 
+    def direita(self):
+        self.configura(0,0,1,1000)
         
-    def stop(self):
-        self.motorLeft.s(1)
-        self.motorLeft.v(0)
-        self.motorRight.s(1)
-        self.motorRight.v(0)
+    def parar(self):
+        self.configura(1,0,1,0)
+
+    def configura(self, sA, vA, sB, vB):
+        self.motorEsquerdo.sentido(sA)
+        self.motorEsquerdo.velocidade(vA)
+        self.motorDireito.sentido(sB)
+        self.motorDireito.velocidade(vB)
 

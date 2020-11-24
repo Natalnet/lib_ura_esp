@@ -5,11 +5,11 @@ class MotorDC:
         self.Pwm = PWM(Pin(pin_vel), freq=1000 ,duty = 0)
         self.Dir= Pin(pin_dir, Pin.OUT)
    
-    def v(self, value):
-        self.Pwm.duty(value)
+    def velocidade(self, valor):
+        self.Pwm.duty(valor)
 
-    def s(self, sentido = 0):
-        if sentido == 1:
+    def sentido(self, sen = 0):
+        if sen == 1:
             self.Dir.off()
         else:
             self.Dir.on()
