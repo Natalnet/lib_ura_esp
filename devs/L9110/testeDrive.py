@@ -25,3 +25,8 @@ for i in range(10):
     dr.frente(1000 - i*100)
     time.sleep(1) 
 dr.parar()
+
+dr.passoDireita()
+dr.passoEsquerda()
+dr.passoFrente()
+dr.passoRe() 

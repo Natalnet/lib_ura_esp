@@ -9,22 +9,22 @@
 #B_IA  -->  Motor B PWM Speed --> 13
 #B_IB  -->  Motor B Direction --> 12 
 
-
-
- 
-
 from MotorDC import MotorDC
+import time 
 class L9110URA(MotorDC): 
     def __init__ (self, pinVelL,pinDirL,pinVelD,pinDirD):
         self.name = 'L9110URA'
         self.motorEsquerdo = MotorDC(pinVelL,pinDirL)
         self.motorDireito = MotorDC(pinVelD,pinDirD)
+        self.configura(1,0,1,0) # parar
 
-    def frente(self, vel = 0):
-        self.configura(0,vel,0,vel)
+    # 0 velocidade mínima e 1000 velocidade máxima 
+    def frente(self, vel = 1000):
+        self.configura(0,1000 - vel,0,1000 - vel)
 
-    def re(self):
-        self.configura(1,1000,1,1000)
+    # 0 velocidade mínima e 1000 velocidade máxima 
+    def re(self, vel):
+        self.configura(1,vel,1,vel)
         
     def esquerda(self):
         self.configura(1,1000,0,0)
@@ -40,4 +40,24 @@ class L9110URA(MotorDC):
         self.motorEsquerdo.velocidade(vA)
         self.motorDireito.sentido(sB)
         self.motorDireito.velocidade(vB)
+
+    def passoFrente(self):
+        self.configura(0,0,0,0)
+        time.sleep_ms(300)
+        self.configura(1,0,1,0) # parar
+    
+    def passoRe(self):
+        self.configura(1,1000,1,1000)
+        time.sleep_ms(300)
+        self.configura(1,0,1,0) # parar
+
+    def passoEsquerda(self):
+        self.configura(1,1000,0,0) 
+        time.sleep_ms(150)
+        self.configura(1,0,1,0) # parar
+
+    def passoDireita(self):
+        self.configura(0,0,1,1000) 
+        time.sleep_ms(150)
+        self.configura(1,0,1,0) # parar
 
