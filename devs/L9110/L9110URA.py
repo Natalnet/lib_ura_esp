@@ -23,7 +23,7 @@ class L9110URA(MotorDC):
         self.configura(0,1000 - vel,0,1000 - vel)
 
     # 0 velocidade mínima e 1000 velocidade máxima 
-    def re(self, vel):
+    def re(self, vel = 0):
         self.configura(1,vel,1,vel)
         
     def esquerda(self):
