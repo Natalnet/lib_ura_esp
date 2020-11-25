@@ -4,7 +4,7 @@ import time
 dr = L9110URA(13,12,5,23) 
 
 # Re 
-dr.configura(1,1000,1,1000)
+dr.configura(0,1000,0,1000)
 
 time.sleep(1)
 dr.frente()

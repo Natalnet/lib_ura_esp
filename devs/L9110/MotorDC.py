@@ -9,7 +9,7 @@ class MotorDC:
         self.Pwm.duty(valor)
 
     def sentido(self, sen = 0):
-        if sen == 1:
+        if sen == 0:
             self.Dir.off()
         else:
             self.Dir.on()
