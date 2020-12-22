@@ -12,9 +12,9 @@
 from MotorDC import MotorDC
 import time 
 class L9110URA(MotorDC): 
-    def __init__ (self, pinVelL,pinDirL,pinVelD,pinDirD):
+    def __init__ (self, pinVelE,pinDirE,pinVelD,pinDirD):
         self.name = 'L9110URA'
-        self.motorEsquerdo = MotorDC(pinVelL,pinDirL)
+        self.motorEsquerdo = MotorDC(pinVelE,pinDirE)
         self.motorDireito = MotorDC(pinVelD,pinDirD)
         self.configura(0,0,0,0) # parar
 

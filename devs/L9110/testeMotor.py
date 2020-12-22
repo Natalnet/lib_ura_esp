@@ -1,9 +1,9 @@
 
 
 from MotorDC import MotorDC 
-## Esquerdo 
+## Direito 
 m1 = MotorDC(13,12)
-##  Right 
+## Esquerdo 
 m2 = MotorDC(5,23)
 import time 
 
@@ -22,12 +22,12 @@ m1.velocidade(0)
 m1.sentido(0)
 time.sleep(1) 
 
-# Motor 2 girando para um lado 
+# Motor 2 girando no sentido anti-horário 
 m2.velocidade(0)
 m2.sentido(1)
 time.sleep(1)
 
-# Motor 2 girando para o um lado 
+# Motor 2 girando no sentido horário 
 m2.velocidade(1000)
 m2.sentido(0)
 time.sleep(1)
