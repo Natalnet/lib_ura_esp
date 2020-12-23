@@ -21,8 +21,7 @@ command = b'x'
 commandTime = 200 # em milisegundos 
 commandLastTime = 0 
 
-#ssid = 'Amaraji'
-#password = 'jeannebeatriz'
+
 ssid = 'XXXX'
 password = 'xxxxx'
 mqtt_server = '000.000.000.000'
