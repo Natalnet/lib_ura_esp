@@ -7,12 +7,12 @@ m1 = MotorDC(13,12)
 m2 = MotorDC(5,23)
 import time 
 
-# Motor 1 girando para um lado 
+# Motor 1 girando no sentido anti-horário 
 m1.velocidade(0)
 m1.sentido(1)
 time.sleep(1)
 
-# Motor 1 girando para o um lado 
+# Motor 1 girando no sentido horário 
 m1.velocidade(1000)
 m1.sentido(0)
 time.sleep(1)

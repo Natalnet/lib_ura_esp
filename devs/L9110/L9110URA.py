@@ -1,13 +1,13 @@
 
 ## Motor A - Esquerdo  
 # Sugestão de Pinos 
-#A_IA  -->  Motor A PWM Speed --> 5 
-#A_IB  -->  Motor A Direction --> 23 
+#A_IA  -->  Motor A PWM Speed --> 13 
+#A_IB  -->  Motor A Direction --> 12 
 
 ## Motor B - Direito 
 # Sugestão de Pinos 
-#B_IA  -->  Motor B PWM Speed --> 13
-#B_IB  -->  Motor B Direction --> 12 
+#B_IA  -->  Motor B PWM Speed --> 5
+#B_IB  -->  Motor B Direction --> 23 
 
 from MotorDC import MotorDC
 import time 
