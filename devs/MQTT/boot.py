@@ -23,12 +23,12 @@ commandLastTime = 0
 
 #ssid = 'Amaraji'
 #password = 'jeannebeatriz'
-ssid = 'PARK BEATRIZ'
-password = 'fazendabeatriz'
-mqtt_server = '157.230.89.7'
+ssid = 'XXXX'
+password = 'xxxxx'
+mqtt_server = '000.000.000.000'
 server_port=1883
-mqtt_user='mqtt'
-mqtt_password='oriva_mqtt'
+mqtt_user='xxxxxx'
+mqtt_password='xxxxxx'
 
 client_id = ubinascii.hexlify(machine.unique_id())
 topic_sub = b'URA/robo1/acao'
