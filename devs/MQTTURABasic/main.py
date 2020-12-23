@@ -3,27 +3,25 @@
 
 
 def sub_cb(topic, msg):
+  global topic_sub
   print((topic, msg))
-  if topic == b'URA/robo1/acao' and msg == b'f':
+  print(topic_sub)
+  if topic == topic_sub and msg == b'f':
     print('ESP received, forward')
-    robot.forward() 
-  if topic == b'URA/robo1/acao' and msg == b's':
+    robot.passoFrente() 
+  if topic == topic_sub and msg == b'p':
     print('ESP received, stop')
-    robot.stop()  
-  if topic == b'URA/robo1/acao' and msg == b'l':
+    robot.parar()  
+  if topic == topic_sub and msg == b'e':
     print('ESP received,  turn left')
-    robot.turnLeft()
-    time.sleep_ms(commandTime)
-    robot.stop()
-  if topic == b'URA/robo1/acao' and msg == b'r':
+    robot.passoEsquerda()
+  if topic == topic_sub and msg == b'd':
     print('ESP received, turn right')
-    robot.turnRight()  
-    time.sleep_ms(commandTime)
-    robot.stop()
-  if topic == b'URA/robo1/acao' and msg == b'b':
+    robot.passoDireita()
+  if topic == topic_sub and msg == b't':
     print('ESP received, backward')
-    robot.backward()  
-  command = msg; 
+    robot.passoRe() 
+
 def connect_and_subscribe():
   global client_id, mqtt_server, topic_sub, server_port, mqtt_user, mqtt_password
   client = MQTTClient(client_id, mqtt_server, server_port, mqtt_user, mqtt_password)
@@ -52,15 +50,6 @@ while True:
       client.publish(topic_pub, msg)
       last_message = time.time()
       counter += 1
-      # se o comando for par direita ou para esquerda o robo deve para depois de 300 ms 
-    #currentCommandTime = time.ticks_ms(); 
-    #if  (currentCommandTime - commandLastTime) > commandTime: 
-    #  if command == b'l' or command == b'r':
-    #    commandLastTime = currentCommandTime; 
-    #    command = b'x'
-    #    robot.stop()
-    #    print('---') 
-    #    print(command)
   except OSError as e:
     restart_and_reconnect()
 

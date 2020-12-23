@@ -1,0 +1,8 @@
+{
+    "ssid" : "MQTT",
+    "password": "testemqtt",
+    "mqtt_server": "000.000.000.000",
+    "server_port": 1883,
+    "mqtt_user": "user",
+    "mqtt_password": "password"
+}

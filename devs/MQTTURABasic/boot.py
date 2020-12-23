@@ -11,28 +11,31 @@ esp.osdebug(None)
 import gc
 gc.collect()
 
+import json 
+conf_file = open('conf.json') 
+conf = json.load(conf_file) 
+conf_file.close() 
+
 # Robot codes 
 from L9110URA import L9110URA
-robot = L9110URA(13,12,5,23) 
-robot.stop()  
+robot = L9110URA(13,12,5,23)
+
 
 
 command = b'x' 
 commandTime = 200 # em milisegundos 
 commandLastTime = 0 
 
-#ssid = 'Amaraji'
-#password = 'jeannebeatriz'
-ssid = 'PARK BEATRIZ'
-password = 'fazendabeatriz'
-mqtt_server = '157.230.89.7'
-server_port=1883
-mqtt_user='mqtt'
-mqtt_password='oriva_mqtt'
+ssid = conf["ssid"]
+password = conf["password"]
+mqtt_server = conf["mqtt_server"]
+server_port = conf["server_port"] 
+mqtt_user = conf["mqtt_user"]
+mqtt_password = conf["mqtt_password"]
 
 client_id = ubinascii.hexlify(machine.unique_id())
-topic_sub = b'URA/robo1/acao'
-topic_pub = b'URA/robo1/linhaE'
+topic_sub = b'URA01/input'
+topic_pub = b'URA01/output'
 
 last_message = 0
 message_interval = 30
