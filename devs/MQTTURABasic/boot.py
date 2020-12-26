@@ -38,7 +38,7 @@ topic_sub = b'URA01/input'
 topic_pub = b'URA01/output'
 
 last_message = 0
-message_interval = 30
+message_interval = 60
 counter = 0
 
 station = network.WLAN(network.STA_IF)
