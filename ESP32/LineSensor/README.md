@@ -7,6 +7,7 @@ Este código é para realizer um teste básico de leitura de um sensor de linha.
 * Sensor Linha TCRT5000 com ajuste de sensibilidade 
 
 ## Ligações 
+![sensor_de_lina_esp32](https://user-images.githubusercontent.com/19957124/117882360-a3e23100-b280-11eb-8494-7a96f8354e2c.jpg)
 
 A tabela abaixo ilustra o uso dos jumpers para conectar o sensor à placa NodeMCU ESP32. 
 
