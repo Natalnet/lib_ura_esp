@@ -1,6 +1,6 @@
 # Sensor de Linha 
 
-Este código é para realizer um teste básico de leitura de um sensor de linha. 
+Este código é para realizer um teste básico de leitura de um sensor de linha. Para mais detalhes ver o vídeo https://youtu.be/9hUtZqEb3bc 
 
 ## Componentes 
 * NodeMCU ESP32 
@@ -29,3 +29,7 @@ sensor = machine.Pin(pinNum, machine.Pin.IN,  machine.Pin.PULL_UP)
 print( sensor.value() )
 ```
 Mais informações sobre resistor de _pull up_ ou _pull down_, veja este link https://www.filipeflop.com/blog/entendendo-o-pull-up-e-pull-down-no-arduino/.
+
+## Referências 
+
+* Vídeo com uma demonstração do sensor de linha, https://youtu.be/9hUtZqEb3bc
