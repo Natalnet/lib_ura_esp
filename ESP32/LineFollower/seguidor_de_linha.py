@@ -1,7 +1,7 @@
 from machine import  Pin
 # Pinos reservados para o sensor de linha 
-pinEsq = 18 #D6 
-pinDir = 19 #D5
+pinEsq = 18 
+pinDir = 19 
 sensorLinhaEsq = machine.Pin(pinEsq, machine.Pin.IN,  machine.Pin.PULL_UP)
 sensorLinhaDir = machine.Pin(pinDir, machine.Pin.IN, machine.Pin.PULL_UP)
 
