@@ -28,8 +28,8 @@ sensor = machine.Pin(pinNum, machine.Pin.IN,  machine.Pin.PULL_UP)
 
 print( sensor.value() )
 ```
-Mais informações sobre resistor de _pull up_ ou _pull down_, veja este link https://www.filipeflop.com/blog/entendendo-o-pull-up-e-pull-down-no-arduino/.
+Mais informações sobre resistor de _pull up_ ou _pull down_, [veja este link](https://www.filipeflop.com/blog/entendendo-o-pull-up-e-pull-down-no-arduino/)
 
 ## Referências 
-
-* Vídeo com uma demonstração do sensor de linha, https://youtu.be/9hUtZqEb3bc
+* [Entendendo o pull-up e pull-down no Arduino](https://www.filipeflop.com/blog/entendendo-o-pull-up-e-pull-down-no-arduino/)
+* [Vídeo com uma demonstração do sensor de linha](https://youtu.be/9hUtZqEb3bc)
