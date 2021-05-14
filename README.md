@@ -1,2 +1,2 @@
-# lib_ura_esp
-Biblioteca Para ESP em Micropython
+# Introdução
+Repositório de códigos para o Robô URA voltados para ESP e Micropython.
