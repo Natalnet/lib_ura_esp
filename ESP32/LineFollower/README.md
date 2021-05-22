@@ -1,0 +1,69 @@
+# Seguidor de linha
+
+Este código é para realizer um teste básico para fazer o robô seguir linha. Para mais detalhes ver o vídeo  ....
+
+## Componentes 
+* NodeMCU ESP32 
+* 2 Sensores de Linha, TCRT5000, com ajuste de sensibilidade 
+* 2 Motores DC TT 
+* 1 Ponte H L9110 
+
+## Ligações 
+![sensor_de_lina_esp32](https://user-images.githubusercontent.com/19957124/117882360-a3e23100-b280-11eb-8494-7a96f8354e2c.jpg)
+
+A tabela abaixo ilustra o uso dos jumpers para conectar o sensor de linha esquerdo ao NodeMCU ESP32. 
+
+| Sensor de Linha Esquerdo | ESP32 |
+| --------------- | --------------- | 
+| G  | GND  | 
+| V+ | 3.3v | 
+| S  | D18 | 
+
+A tabela abaixo ilustra as conexões do sensor de linha direito ao NodeMCU ESP32. 
+
+| Sensor de Linha Direito | ESP32 |
+| --------------- | --------------- | 
+| G  | GND  | 
+| V+ | 3.3v | 
+| S  | D19 | 
+
+A tabela abaixo ilustra as conexões entre os motores e o NodeMCU ESP32. 
+O Motor esquerdo está ligado na entrada Motor A da ponte H e o Motor direito está ligado na entrada Motor B.  
+
+| Ponte H L9110  | ESP32 |
+| --------------- | --------------- | 
+| B-1A | D5 |
+| B-1B | D23 |
+| G  | GND  | 
+| VCC | Vin (5v) | 
+| A-1A | D13 | 
+| A-1B | D12 | 
+
+Para mais informações sobre o uso da Ponte H L9110 [ver este link.]() 
+
+## Código Básico 
+
+### Sensores de linha 
+
+Este código configura os pinos GPIO 18 (D18) e GPIO 19 (D19) como entradas para os sensores de linha da esquerda e da direita respectivamente. 
+
+```python 
+from machine import  Pin
+# Pinos reservados para o sensor de linha 
+pinEsq = 18 
+pinDir = 19 
+sensorLinhaEsq = machine.Pin(pinEsq, machine.Pin.IN,  machine.Pin.PULL_UP)
+sensorLinhaDir = machine.Pin(pinDir, machine.Pin.IN, machine.Pin.PULL_UP)
+```
+Mais informações sobre o sensor de linha, [veja este link.]()
+
+
+### Seguidor de linha 
+
+... 
+
+## Referências 
+
+
+* [Documentação básica do sensor de linha](https://github.com/Natalnet/lib_ura_esp/blob/master/ESP32/LineSensor/README.md)
+* [Vídeo com uma demonstração do sensor de linha](https://youtu.be/9hUtZqEb3bc)
