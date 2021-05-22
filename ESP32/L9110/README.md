@@ -7,8 +7,16 @@ Este código é para realizer testes básicos para a movimentação dos motores 
 * 2 Motores DC TT 
 * 1 Ponte H L9110 
 
+Foto da Ponte H L9110:
+![IMG_20210522_103527](https://user-images.githubusercontent.com/19957124/119228746-c844d580-baea-11eb-9ab5-8cec7d7fecf7.jpg)
+
+Foto dos Motores DC TT: 
+![IMG_20210522_103644](https://user-images.githubusercontent.com/19957124/119228753-d09d1080-baea-11eb-8d9c-b4694f747d84.jpg)
+
 ## Ligações 
-![sensor_de_lina_esp32](https://user-images.githubusercontent.com/19957124/117882360-a3e23100-b280-11eb-8494-7a96f8354e2c.jpg)
+
+Fotos das ligações: 
+![IMG_20210522_103840](https://user-images.githubusercontent.com/19957124/119228758-d7c41e80-baea-11eb-9f44-955a3929f09f.jpg)
 
 A tabela abaixo ilustra as conexões, por jumpers, entre os motores e o NodeMCU ESP32. 
 O Motor esquerdo está ligado na entrada Motor A da ponte H e o Motor direito está ligado na entrada Motor B.  
