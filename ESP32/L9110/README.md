@@ -1,6 +1,6 @@
 # Ponte H
 
-Este código é para realizer testes básicos para a movimentação dos motores e o deslocamento do robô. Para mais detalhes ver o vídeo  ....
+Este código é para realizer testes básicos para a movimentação dos motores e o deslocamento do robô. Para mais detalhes ver o vídeo  [neste link.](https://www.youtube.com/watch?v=Zrb4ya5w_Og&)
 
 ## Componentes 
 * NodeMCU ESP32 
@@ -90,11 +90,54 @@ Ajusta a velocidade no sentido anti-horário:
 pwmE.duty(1000)
 direcaoE.off()
 ```
+### Classe L9110 
 
+A classe L9110URA permite abstrair os comandos para o controle da movimentação do robô. 
+
+O código abaixo utiliza a classe L9110URA para instanciar um objeto, dr. 
+```python 
+from L9110URA import L9110URA 
+import time 
+
+dr = L9110URA(13,12,5,23) 
+``` 
+
+
+O método `configura` permite ajustar a direção e a velocidade do motor da esquerda e o da direita respectivamente. 
+```python 
+dr.configura(0,1000,0,1000)
+``` 
+No exemplo de código acima, os valores dos parâmetros do método configura faz o robô andar para trás, ré. 
+
+Esta classe possui também métodos para movimentar o robô para frente, ré, rotacionar para esquerda e rotacionar para direita. No exemplo abaixo cada comando é executado pelo robô durante um segundo. 
+
+```python
+dr.frente()
+
+time.sleep(1)
+dr.re() 
+
+time.sleep(1)
+dr.parar() 
+
+time.sleep(1)
+dr.esquerda()  
+
+time.sleep(1)
+dr.direita() 
+``` 
+
+Esta classe também possui métodos para o robô realizar "pequenos passos". No código abaixo o robô realiza movimentos curtos, giro leve para direita, para esquerda, para frente e para trás, respectivamente.  
+
+```python
+dr.passoDireita()
+dr.passoEsquerda()
+dr.passoFrente()
+dr.passoRe() 
+```
 
 ## Referências 
 
-
-* [Documentação básica do sensor de linha](https://github.com/Natalnet/lib_ura_esp/blob/master/ESP32/LineSensor/README.md)
-* [Vídeo com uma demonstração do sensor de linha](https://youtu.be/9hUtZqEb3bc)
+* [L9110 2-CHANNEL MOTOR DRIVER](http://me.web2.ncut.edu.tw/ezfiles/39/1039/img/617/L9110_2_CHANNEL_MOTOR_DRIVER.pdf)
+* [Vídeo sobre como controlar motores DC com MicroPython e ESP, robô URA](https://www.youtube.com/watch?v=Zrb4ya5w_Og&)
 * [Usando as saídas PWM do Arduino](https://www.embarcados.com.br/pwm-do-arduino/)
