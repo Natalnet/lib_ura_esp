@@ -1,6 +1,6 @@
 # Seguidor de linha
 
-Este código é para realizer um teste básico para fazer o robô seguir linha. Para mais detalhes ver o vídeo  ....
+Este código é para realizer um teste básico para fazer o robô seguir linha. Para mais detalhes ver o vídeo [neste link.](https://www.youtube.com/watch?v=pcTP0I5jl6E) 
 
 ## Componentes 
 * NodeMCU ESP32 
@@ -9,8 +9,7 @@ Este código é para realizer um teste básico para fazer o robô seguir linha. 
 * 1 Ponte H L9110 
 
 ## Ligações 
-![sensor_de_lina_esp32](https://user-images.githubusercontent.com/19957124/117882360-a3e23100-b280-11eb-8494-7a96f8354e2c.jpg)
-
+ 
 A tabela abaixo ilustra o uso dos jumpers para conectar o sensor de linha esquerdo ao NodeMCU ESP32. 
 
 | Sensor de Linha Esquerdo | ESP32 |
@@ -55,7 +54,7 @@ pinDir = 19
 sensorLinhaEsq = machine.Pin(pinEsq, machine.Pin.IN,  machine.Pin.PULL_UP)
 sensorLinhaDir = machine.Pin(pinDir, machine.Pin.IN, machine.Pin.PULL_UP)
 ```
-Mais informações sobre o sensor de linha, [veja este link.]()
+Mais informações sobre o sensor de linha, [veja este link.](https://github.com/Natalnet/lib_ura_esp/blob/master/ESP32/LineSensor/README.md)
 
 
 ### Seguidor de linha 
@@ -67,3 +66,4 @@ Mais informações sobre o sensor de linha, [veja este link.]()
 
 * [Documentação básica do sensor de linha](https://github.com/Natalnet/lib_ura_esp/blob/master/ESP32/LineSensor/README.md)
 * [Vídeo com uma demonstração do sensor de linha](https://youtu.be/9hUtZqEb3bc)
+* [Demonstração seguidor de linha do URA 6.0 ESP](https://www.youtube.com/watch?v=pcTP0I5jl6E) 
