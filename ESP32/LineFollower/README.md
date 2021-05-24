@@ -59,7 +59,34 @@ Mais informações sobre o sensor de linha, [veja este link.](https://github.com
 
 ### Seguidor de linha 
 
-... 
+De acordo com os testes realizados, o sensor vai responder verdadeiro (valor 1) quando estiver em cima da linha (preta), se tiver sobre uma região clara, detecta falso (valor 0). 
+
+O código a seguir é um código muito simples de um algoritmo de seguir linha. A estratégia é a seguinte: 
+
+Repetir até que a condição de parada aconteça:
+1. Espera delta milisegundos 
+2. Andar para frente caso o senosr de linha da esquerda (SLE) e o da direita (SLD) identifiquem a cor mais clara (região livre). 
+3. Caso a situação 2 falhe, verifica se encontrou linha nos dois sensores e para. Logo a condição de parada é encontrar uma linha nos dois sensores. Neste caso o robô para seu movimento. 
+4. Caso a situação 3 falhe, é por que foi testado a situação 2 e também falhou. Logo apenas um dos senores está detectando a linha preta. O teste realizado é verificar se o sensor de linha esquerdo detectou a linha e a ação é girar para esquerda. 
+5. Significa que todas os testes anteriores falharam e para garantir, o teste de detecção de linha no sensor direito e realizado, caso verdadeiro a ação é girar para esquerda.  
+
+
+```python 
+parar =  False 
+delta = 50 
+
+while ( not parar ):
+  time.sleep_ms(delta) 
+  if ( not sensorLinhaDir.value() and not sensorLinhaEsq.value() ): 
+    dr.frente()
+  elif (  sensorLinhaDir.value() and  sensorLinhaEsq.value() ):
+    dr.parar()
+    parar = True
+  elif ( sensorLinhaEsq.value() ):
+    dr.esquerda()
+  elif ( sensorLinhaDir.value() ):
+    dr.direita() 
+```
 
 ## Referências 
 
