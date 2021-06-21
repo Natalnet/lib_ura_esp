@@ -3,11 +3,12 @@
 Este código é para realizer um teste básico de leitura de um sensor utrassônico para medir distância. 
 
 ## Componentes 
+
 * NodeMCU ESP32 
 * Sensor ultrassônico HCSR04 
 
 ## Ligações 
-![sensor_de_lina_esp32]( )
+![IMG_20210620_215243](https://user-images.githubusercontent.com/19957124/122694540-0d584680-d214-11eb-9c18-9b82e1f20f72.jpg)
 
 A tabela abaixo ilustra o uso dos jumpers para conectar o sensor à placa NodeMCU ESP32. A versão utilizada neste teste é compatível com 3.3 volts. 
 
