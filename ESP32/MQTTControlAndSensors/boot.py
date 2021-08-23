@@ -20,11 +20,12 @@ conf_file.close()
 from L9110URA import L9110URA
 robot = L9110URA(13,12,5,23)
 
+from hcsr04 import HCSR04
+ 
+distSensor = HCSR04(trigger_pin=19, echo_pin=18)
 
 
-command = b'x' 
-commandTime = 200 # em milisegundos 
-commandLastTime = 0 
+
 
 ssid = conf["ssid"]
 password = conf["password"]
@@ -38,7 +39,7 @@ topic_sub = b'URA01/input'
 topic_pub = b'URA01/output'
 
 last_message = 0
-message_interval = 60
+message_interval = 1
 counter = 0
 
 station = network.WLAN(network.STA_IF)
