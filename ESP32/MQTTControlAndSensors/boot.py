@@ -4,7 +4,6 @@ import time
 from umqttsimple import MQTTClient
 import ubinascii
 import machine
-import micropython
 import network
 import esp
 esp.osdebug(None)
@@ -24,7 +23,8 @@ from hcsr04 import HCSR04
  
 distSensor = HCSR04(trigger_pin=19, echo_pin=18)
 
-
+leftLineSensor =  machine.Pin(14, machine.Pin.IN,  machine.Pin.PULL_UP)
+rightLineSensor =  machine.Pin(27, machine.Pin.IN,  machine.Pin.PULL_UP)
 
 
 ssid = conf["ssid"]

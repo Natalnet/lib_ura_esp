@@ -46,7 +46,9 @@ while True:
     client.check_msg()
     if (time.time() - last_message) > message_interval:
       distance = distSensor.distance_cm()
-      msg = b'MSG %d %d X X' % (counter,distance) 
+      leftValue = leftLineSensor.value()
+      rightValue = rightLineSensor.value()
+      msg = b'MSG %d %d %d %d' % (counter,distance,leftValue,rightValue) 
       client.publish(topic_pub, msg)
       last_message = time.time()
       counter += 1
