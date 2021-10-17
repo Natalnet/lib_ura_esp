@@ -6,7 +6,7 @@ import time
 pinNum = 4 #D4 
 
 sensor = machine.Pin(pinNum, machine.Pin.IN,  machine.Pin.PULL_UP)
-n = 20 
+n = 40 
 delta = 500 
 # Este código faz n leituras 
 # O intervalo de cada leitura é delta milisegundos 
