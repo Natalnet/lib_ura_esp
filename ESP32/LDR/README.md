@@ -11,6 +11,8 @@ Este código é para realizer um teste básico de leitura de um sensor de LDR. P
 ## Ligações 
 
 Circuito básico: 
+
+
 ![ldr_montagem](https://user-images.githubusercontent.com/19957124/144618767-7b6ceaba-a161-4883-bb33-e345597811f6.png)
 
 
