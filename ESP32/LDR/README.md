@@ -1,6 +1,6 @@
 # LDR - Sensor de iluminação 
 
-Este código é para realizer um teste básico de leitura de um sensor de LDR. Para mais detalhes ver o vídeo  .... 
+Este código é para realizer um teste básico de leitura de um sensor de LDR. Para mais detalhes ver o vídeo  https://youtu.be/Xb-_oG65H2I
 
 ## Componentes 
 * NodeMCU ESP32 
@@ -26,7 +26,7 @@ A tabela abaixo ilustra o uso dos jumpers para conectar o sensor à placa NodeMC
 
 ## Código Básico 
 
-Este código configura o pino GPIO 33 (D3) como entrada analógica (ADC) e realiza uma leitura.  
+Este código configura o pino GPIO33 (D33) como entrada analógica (ADC) e realiza uma leitura.  
 
 ```python 
 from machine import Pin, ADC
@@ -40,4 +40,4 @@ print(ldr_value)
 ```
  
 ## Referências 
- 
+* [Sensor de Luz, LDR, com Micropython e ESP32](https://youtu.be/Xb-_oG65H2I)
