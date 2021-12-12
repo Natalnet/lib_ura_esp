@@ -3,10 +3,14 @@
   
 
 from machine import Pin, ADC
+import time 
 
 ldr = ADC(Pin(33))
 
-ldr.atten(ADC.ATTN_11DB)       #Full range: 3.3v 
+ldr.atten(ADC.ATTN_11DB)        
 
-ldr_value = ldr.read()
-print(ldr_value)
+for i in range(50):
+    ldr_value = ldr.read()
+    print(ldr_value)
+    time.sleep_ms(300)
+
