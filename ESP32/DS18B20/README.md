@@ -1,11 +1,11 @@
-# LDR - Sensor de iluminação 
+# DS18B20 - Sensor de temperatura para água  
 
-Este código é para realizer um teste básico de leitura de um sensor de LDR. Para mais detalhes ver o vídeo  https://youtu.be/Xb-_oG65H2I
+Este código é para realizer um teste básico de leitura de um sensor de temperatura para água, DS18B20. Para mais detalhes ver o vídeo  
 
 ## Componentes 
 * NodeMCU ESP32 
-* Sensor LDR 
-* 1 resistor de 10k 
+* Sensor, DS18B20, de temperatura  
+* 1 resistor de 4k7  
 
 
 ## Ligações 
@@ -13,31 +13,35 @@ Este código é para realizer um teste básico de leitura de um sensor de LDR. P
 Circuito básico: 
 
 
-![ldr_montagem](https://user-images.githubusercontent.com/19957124/144618767-7b6ceaba-a161-4883-bb33-e345597811f6.png)
+![ds18b20_montagem](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/06/ds18b20_esp32_single_normal.png)
 
 
 A tabela abaixo ilustra o uso dos jumpers para conectar o sensor à placa NodeMCU ESP32. 
 
-| Sensor de LDR | ESP32 |
+| Sensor DS18B20 | ESP32 |
 | --------------- | --------------- | 
 | G  | GND  | 
-| V+ | 3.3v | 
-| S  | D33 | 
+| V+ | 3.3v e ligado no resistor| 
+| S  | D4 e ligado na outra extremidade do resistor  | 
 
 ## Código Básico 
 
-Este código configura o pino GPIO33 (D33) como entrada analógica (ADC) e realiza uma leitura.  
+Este código configura o pino GPIO04 (D4) como entrada serial endereçável (OneWire), apresenta o dispositivo através de seu endereço e realiza uma leitura. É possível ter mais de um sensor conenctado no mesmo pino (D4). 
 
 ```python 
-from machine import Pin, ADC
+import machine, onewire, ds18x20
 
-ldr = ADC(Pin(33))
+ds_pin = machine.Pin(4)
+ds_sensor = ds18x20.DS18X20(onewire.OneWire(ds_pin))
 
-ldr.atten(ADC.ATTN_11DB)      
+roms = ds_sensor.scan()
+print('Found DS devices: ', roms)
 
-ldr_value = ldr.read()
-print(ldr_value)
+ds_sensor.convert_temp()
+for rom in roms:
+    print(rom)
+    print(ds_sensor.read_temp(rom))
 ```
  
 ## Referências 
-* [Sensor de Luz, LDR, com Micropython e ESP32](https://youtu.be/Xb-_oG65H2I)
+* [Sensor de temperatura de água, DS18B20, com Micropython e ESP32]() 

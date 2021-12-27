@@ -1,5 +1,5 @@
-#Fonte: https://randomnerdtutorials.com/micropython-ds18b20-esp32-esp8266/ 
-## Complete project details at https://RandomNerdTutorials.com 
+# Source: https://randomnerdtutorials.com/micropython-ds18b20-esp32-esp8266/ 
+## Details at https://RandomNerdTutorials.com 
 
 import machine, onewire, ds18x20, time
 
