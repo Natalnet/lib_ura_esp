@@ -46,4 +46,4 @@ for rom in roms:
 ## Referências 
 * [Sensor DS18B20 Random Nerd Tutorial](https://randomnerdtutorials.com/micropython-ds18b20-esp32-esp8266/)
 * https://RandomNerdTutorials.com 
-* [Sensor de temperatura de água, DS18B20, com Micropython e ESP32]() 
+* [Vídeo testando o sensor de temperatura de água, DS18B20, com Micropython e ESP32](https://youtu.be/B-SaZFqwZ-8) 
