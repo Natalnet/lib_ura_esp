@@ -1,4 +1,4 @@
-# Teste com o LED embutido na placa NodeMCU ESP32 
+# Teste com a placa NodeMCU ESP32 
 #Fonte:  https://RandomNerdTutorials.com
   
 

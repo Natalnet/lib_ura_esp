@@ -1,6 +1,6 @@
 # DS18B20 - Sensor de temperatura para água  
 
-Este código é para realizer um teste básico de leitura de um sensor de temperatura para água, DS18B20. Para mais detalhes ver o vídeo  
+Este código é para realizer um teste básico de leitura de um sensor de temperatura para água, DS18B20. Para mais detalhes ver o vídeo ([link](https://youtu.be/B-SaZFqwZ-8)). 
 
 ## Componentes 
 * NodeMCU ESP32 
