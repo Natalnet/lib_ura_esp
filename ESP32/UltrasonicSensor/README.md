@@ -32,4 +32,4 @@ print('Distance:', distance, 'cm')
 ```
 
 ## Referências 
-* [Vídeo com uma demonstração do sensor de distância ... em breve]( )
+* [Vídeo com uma demonstração do sensor de distância](https://youtu.be/wgBYIkIfLdg)
