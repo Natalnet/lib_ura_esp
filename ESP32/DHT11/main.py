@@ -48,7 +48,7 @@ while True:
     if (time.time() - last_message) > message_interval:
       sensor.measure()
       temp = sensor.temperature()
-      msg = b'MSG %d %d' % (counter,temp) 
+      msg = b'MSG %d %3.1f' % (counter,temp) 
       client.publish(topic_pub, msg)
       last_message = time.time()
       counter += 1
