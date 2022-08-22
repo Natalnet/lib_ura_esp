@@ -12,4 +12,4 @@ pin.value(1)
 # Comandos para desliga o LED azul  
 pin.off() 
 
-pin.value(0) 
+pin.value(1) 
