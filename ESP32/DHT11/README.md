@@ -1,4 +1,4 @@
-# DS18B20 - Sensor de temperatura para água  
+# DHT11 - Sensor de temperatura
 
 Este código é para realizer um teste básico de leitura de um sensor de temperatura ambiente, DHT11. Para mais detalhes ver o vídeo neste [link](https://youtu.be/XGheCgyzBLo). 
 
