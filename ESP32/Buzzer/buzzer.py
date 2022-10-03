@@ -18,7 +18,7 @@ class GORILLACELL_BUZZER:
         # Disable the pulse, setting the duty to 0
         self.pwm.duty(0)
         # Disconnect the pwm driver
-        #self.pwm.deinit() # remove to play the next melodies
+        self.pwm.deinit() # remove to play the next melodies
 
 # Notes and its equivalent frequency
 B0  = 31
