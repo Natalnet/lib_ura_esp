@@ -1,6 +1,6 @@
 # Buzzer - atuador sonoro 
 
-Este código é para realizer um teste básico em um buzzer. Para mais detalhes ver o vídeo neste [link](https://youtu.be/XGheCgyzBLo). 
+Este código é para realizer um teste básico em um buzzer. Para mais detalhes ver o vídeo neste [link](https://youtu.be/eNcm6n8meGM). 
 
 ## Componentes 
 * NodeMCU ESP32 
@@ -49,6 +49,6 @@ buzzer.deinit()
 ```
  
 ## Referências 
- 
+* [Vídeo com explicações básicas da montagem do Buzzer com ESP32](https://youtu.be/eNcm6n8meGM)  
 * [Teste com ESP32 e MicroPython tocando um trecho da música do Mario](https://youtu.be/N2lBoXjElc0) 
 * [Códigos para o Buzzer - TechToTinker.blogspot.com](https://techtotinker.blogspot.com/2021/06/038-micropython-technotes-buzzer.html)
