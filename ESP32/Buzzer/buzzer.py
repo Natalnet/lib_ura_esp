@@ -1,5 +1,6 @@
 # More details can be found in TechToTinker.blogspot.com 
 # George Bantique | tech.to.tinker@gmail.com
+# https://techtotinker.blogspot.com/2021/06/038-micropython-technotes-buzzer.html 
 
 from machine import Pin
 from machine import PWM
