@@ -5,6 +5,7 @@ from machine import Pin
 from machine import PWM
 from time import sleep_ms
 
+# Configura o pino 23 como saída PWM e zera o sinal de saída
 buzzer = PWM(Pin(23, Pin.OUT))
 buzzer.init(freq=0, duty=0)
 

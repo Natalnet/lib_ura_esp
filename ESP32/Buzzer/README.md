@@ -51,3 +51,4 @@ buzzer.deinit()
 ## Referências 
  
 * [Teste com ESP32 e MicroPython tocando um trecho da música do Mario](https://youtu.be/N2lBoXjElc0) 
+* [Códigos para o Buzzer - TechToTinker.blogspot.com](https://techtotinker.blogspot.com/2021/06/038-micropython-technotes-buzzer.html)
