@@ -19,7 +19,9 @@ class GORILLACELL_BUZZER:
         # Disable the pulse, setting the duty to 0
         self.pwm.duty(0)
         # Disconnect the pwm driver
-        self.pwm.deinit() # remove to play the next melodies
+        #self.pwm.deinit() # remove to play the next melodies
+    def disable(self):
+        self.pwm.deinit()
 
 # Notes and its equivalent frequency
 B0  = 31
@@ -153,12 +155,14 @@ twinkle = [
 buzzer = GORILLACELL_BUZZER(23)
 
 print("Playing mario.")
-buzzer.play(mario, 150, 412)
+buzzer.play(mario, 150, 256)
 sleep_ms(1000)
 
 print("Playing jingle bells.")
-buzzer.play(jingle, 250, 312)
+buzzer.play(jingle, 250, 256)
 sleep_ms(1000)
 
 print("Playing twinkle, twinkle little star.")
-buzzer.play(twinkle, 600, 212)
+buzzer.play(twinkle, 600, 128)
+
+buzzer.disable() 
