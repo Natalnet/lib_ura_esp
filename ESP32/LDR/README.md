@@ -40,4 +40,5 @@ print(ldr_value)
 ```
  
 ## Referências 
-* [Sensor de Luz, LDR, com Micropython e ESP32](https://youtu.be/Xb-_oG65H2I)
+* [Vídeo: Sensor de Luz, LDR, com Micropython e ESP32](https://youtu.be/Xb-_oG65H2I)
+* [Código com LDR](https://github.com/Natalnet/lib_ura_esp/edit/master/ESP32/LDR/)

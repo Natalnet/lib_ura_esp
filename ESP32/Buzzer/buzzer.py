@@ -1,5 +1,6 @@
 # More details can be found in TechToTinker.blogspot.com 
 # George Bantique | tech.to.tinker@gmail.com
+# https://techtotinker.blogspot.com/2021/06/038-micropython-technotes-buzzer.html 
 
 from machine import Pin
 from machine import PWM
@@ -19,6 +20,8 @@ class GORILLACELL_BUZZER:
         self.pwm.duty(0)
         # Disconnect the pwm driver
         #self.pwm.deinit() # remove to play the next melodies
+    def disable(self):
+        self.pwm.deinit()
 
 # Notes and its equivalent frequency
 B0  = 31
@@ -152,12 +155,14 @@ twinkle = [
 buzzer = GORILLACELL_BUZZER(23)
 
 print("Playing mario.")
-buzzer.play(mario, 150, 412)
+buzzer.play(mario, 150, 256)
 sleep_ms(1000)
 
 print("Playing jingle bells.")
-buzzer.play(jingle, 250, 312)
+buzzer.play(jingle, 250, 256)
 sleep_ms(1000)
 
 print("Playing twinkle, twinkle little star.")
-buzzer.play(twinkle, 600, 212)
+buzzer.play(twinkle, 600, 128)
+
+buzzer.disable() 
