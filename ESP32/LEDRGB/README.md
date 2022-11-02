@@ -24,11 +24,11 @@ Desenho detalhado do LED RGB WS2812b:
  
 A tabela abaixo ilustra o uso dos pinos do LED SMD WS2812b. 
 
-| LED RGB | ESP32 |
-| --------------- | --------------- | 
-| VSS  | GND  | 
-| VDD | 3.3v | 
-| DIN  | GPIO 23 | 
+| LED RGB | ESP32 | Capa 3D |
+| --------------- | --------------- | --------------- | 
+| VSS  | GND  |  - |
+| VDD | 3.3v | + | 
+| DIN  | GPIO 23 | C (cor) |  
 
 ## Código Básico 
 
