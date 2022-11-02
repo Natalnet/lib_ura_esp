@@ -8,10 +8,10 @@ Este código é para realizer um teste básico para ligar uma "array" de LEDs RG
 
  
 
-<img src="https://user-images.githubusercontent.com/19957124/199511407-44272aba-0163-4ffd-b9f7-639ee960c1fa.jpeg" width="300">
+<img src="https://user-images.githubusercontent.com/19957124/199511407-44272aba-0163-4ffd-b9f7-639ee960c1fa.jpeg" width="400">
 
 
-<img src="https://user-images.githubusercontent.com/19957124/199524886-7dc157a6-627d-4e3a-b486-90b4f6fadc37.jpeg" width="300">
+<img src="https://user-images.githubusercontent.com/19957124/199524886-7dc157a6-627d-4e3a-b486-90b4f6fadc37.jpeg" width="400">
 
 ## Ligações 
 
