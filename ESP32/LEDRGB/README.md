@@ -6,6 +6,11 @@ Este código é para realizer um teste básico para ligar uma "array" de LEDs RG
 * NodeMCU ESP32 
 * LED RGB SMD WS2812b 
 
+![LED RBG em Capa 3D](https://user-images.githubusercontent.com/19957124/199511407-44272aba-0163-4ffd-b9f7-639ee960c1fa.jpeg)
+
+<img src="https://user-images.githubusercontent.com/19957124/199511407-44272aba-0163-4ffd-b9f7-639ee960c1fa.jpeg" width="300">
+
+
 ## Ligações 
 
 Desenho detalhado do LED RGB WS2812b: 
