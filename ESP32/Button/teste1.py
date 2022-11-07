@@ -2,7 +2,7 @@
 import machine
 button = machine.Pin(12, machine.Pin.IN, machine.Pin.PULL_UP)
 cont = 0
-while cont < 2000:
+while cont < 10000:
   if not button.value():
     print('Button pressed!')
   else:
