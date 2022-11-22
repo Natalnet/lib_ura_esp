@@ -16,12 +16,19 @@ delta = 10
 ## O sensor retorna 1 para linha preta e 0 para fundo claro 
 while ( not parar ):
   time.sleep_ms(delta) 
-  if ( not sensorLinhaDir.value() and not sensorLinhaEsq.value() ): 
-    dr.frente(800)
+  if ( not sensorLinhaDir.value() and not sensorLinhaEsq.value() ):
+    dr.parar()
+    time.sleep_ms(2) 
+    dr.frente(900) 
   elif ( sensorLinhaDir.value() and  sensorLinhaEsq.value() ):
     dr.re()
     time.sleep_ms(50) 
   elif ( sensorLinhaEsq.value() ):
+    dr.parar()
+    time.sleep_ms(5) 
     dr.esquerda()
   elif ( sensorLinhaDir.value() ):
+    dr.parar()
+    time.sleep_ms(5) 
     dr.direita() 
+
