@@ -13,7 +13,7 @@ Este código é para realizar um teste básico com um LED.
 
 <img alt="Circuit-Diagram-for-ESP32-LED" src="https://github.com/Natalnet/lib_ura_esp/assets/19957124/53ac9923-e7f3-41c4-a057-92e362cdd2b5"  width="400">
 
-Fonte da Imagem: https://learn.adafruit.com/assets/35367
+Fonte da Imagem: https://iotdesignpro.com/projects/esp32-web-server-control-led-from-webpage
 
 A tabela abaixo ilustra o uso dos pinos do botão.
 
