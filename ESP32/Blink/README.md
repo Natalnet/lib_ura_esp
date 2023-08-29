@@ -15,7 +15,7 @@ Este código é para realizar um teste básico com um LED.
 
 Fonte da Imagem: https://iotdesignpro.com/projects/esp32-web-server-control-led-from-webpage
 
-A tabela abaixo ilustra o uso dos pinos do botão.
+A tabela abaixo ilustra o uso dos pinos:
 
 | LED | ESP32   |
 | ----- | ------- |
