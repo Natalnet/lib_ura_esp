@@ -12,16 +12,26 @@ import time
 dr = L9110URA(13,12,5,23) 
 
 parar =  False 
-delta = 50 
+delta = 1000 
+deltaMove = 100
+deltaStop = 20
 ## O sensor retorna 1 para linha preta e 0 para fundo claro 
 while ( not parar ):
   time.sleep_ms(delta) 
-  if ( not sensorLinhaDir.value() and not sensorLinhaEsq.value() ): 
-    dr.frente()
+  if ( not sensorLinhaDir.value() and not sensorLinhaEsq.value() ):
+    dr.frente(900) 
+    #print('Frente!')
   elif ( sensorLinhaDir.value() and  sensorLinhaEsq.value() ):
-    dr.parar()
-    parar = True
+    dr.re()
+    time.sleep_ms(50) 
+    #print('Re!')
   elif ( sensorLinhaEsq.value() ):
+    dr.parar()
+    time.sleep_ms(deltaStop) 
     dr.esquerda()
+    #print('Esquerda!')
   elif ( sensorLinhaDir.value() ):
+    dr.parar()
+    time.sleep_ms(deltaStop) 
     dr.direita() 
+    #print('Direita!')
