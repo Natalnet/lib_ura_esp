@@ -11,7 +11,7 @@ Circuito básico:
 
 A tabela abaixo ilustra o uso dos jumpers para conectar o sensor à placa NodeMCU ESP32. 
 
-| Sensor DS18B20 | ESP32 |
+| Sensor DHT11 | ESP32 |
 | --------------- | --------------- | 
 | -  | GND  | 
 |  + | 3.3v | 
@@ -29,7 +29,6 @@ sensor = dht.DHT11(Pin(14))
 sensor.measure()
 temp = sensor.temperature()
 print('Temperatura: %3.1f C' %temp)
-
 
 ```
  
